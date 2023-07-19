@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube Info Panel Content Reader Blocker",
+  "description": "Extension to block youtube info panel content reader panes",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/*"
+      ],
+      "js": [
+        "block.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "favicon.png"
+  }
+}
